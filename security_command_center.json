@@ -1,0 +1,1443 @@
+{
+	"name": "Security Command Center",
+	"versions": {
+		"attack": "12",
+		"navigator": "4.8.0",
+		"layer": "4.4"
+	},
+	"domain": "enterprise-attack",
+	"description": "Security Command Center (SCC) provides analysts with a centralized dashboard for cyber situational awareness by aggregating threat and vulnerability reports. SCC works by scanning for weaknesses or monitoring an organization's logging stream for anomalies (e.g., Google Workspace logs, containers, vulnerabilities in web applications, and hypervisor-level instrumentation). To further mitigate risks in the infrastructure, SCC easily integrates with other Google Cloud security solutions: Cloud DLP, Chronicle, Binary Authorization, Cloud Armor, and 3rd party solutions (e.g., SIEM, SOAR). The cyber-attacks in this solution are correlated to SCC's premium tier which included additional security features for: Event Threat Detection, Container Threat Detection, Virtual Machine Threat Detection, Web Security Scanner, and Security Health Analytics",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"macOS",
+			"Windows",
+			"Network",
+			"PRE",
+			"Containers",
+			"SaaS",
+			"IaaS",
+			"Azure AD",
+			"Office 365",
+			"Google Workspace"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1613",
+			"tactic": "discovery",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Discovery: Can get sensitive Kubernetes object check\nGKE_CONTROL_PLANE_CAN_GET_SENSITIVE_OBJECT\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1129",
+			"tactic": "execution",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Added Library Loaded\t\nscc service: KTD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1543",
+			"tactic": "persistence",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: GCE Admin Added Startup Script\nGCE_ADMIN_ADD_STARTUP_SCRIPT\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1543",
+			"tactic": "privilege-escalation",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: GCE Admin Added Startup Script\nGCE_ADMIN_ADD_STARTUP_SCRIPT\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1578",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Remove Billing Admin\nSENSITIVE_ACTION_REMOVE_BILLING_ADMIN\nscc service: SAS"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1069",
+			"tactic": "discovery",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1069.003",
+			"tactic": "discovery",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Discovery: Service Account Self-Investigation\nSERVICE_ACCOUNT_SELF_INVESTIGATION\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1106",
+			"tactic": "execution",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Added Binary Executed\t\nscc service: KTD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Organization Policy Changed\nSENSITIVE_ACTION_CHANGE_ORGANIZATION_POLICY\nscc service: SAS"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1567",
+			"tactic": "exfiltration",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Exfiltration: CloudSQL Over-Privileged Grant\nCLOUDSQL_EXFIL_USER_GRANTED_ALL_PERMISSIONS\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1567.002",
+			"tactic": "exfiltration",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Exfiltration: BigQuery Data Exfiltration\nDATA_EXFILTRATION_BIG_QUERY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Exfiltration: BigQuery Data Extraction\nDATA_EXFILTRATION_BIG_QUERY_EXTRACTION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Exfiltration: BigQuery Data to Google Drive\nDATA_EXFILTRATION_BIG_QUERY_TO_GOOGLE_DRIVE\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Exfiltration: CloudSQL Data Exfiltration\nCLOUDSQL_EXFIL_EXPORT_TO_EXTERNAL_GCS\nCLOUDSQL_EXFIL_EXPORT_TO_PUBLIC_GCS\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Exfiltration: CloudSQL Restore Backup to External Organization\nCLOUDSQL_EXFIL_RESTORE_BACKUP_TO_EXTERNAL_INSTANCE\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552",
+			"tactic": "credential-access",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Unsecured Credentials: Secret Found In Logs\nSECRET_FOUND_IN_LOGS_SECRET_MANAGER\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1610",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Malicious URL Observed\nscc service: KTD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1610",
+			"tactic": "execution",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Malicious URL Observed\nscc service: KTD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1548",
+			"tactic": "privilege-escalation",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Breakglass Workload Deployment\nBINARY_AUTHORIZATION_BREAKGLASS_WORKLOAD_CREATE\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Breakglass Workload Deployment\nBINARY_AUTHORIZATION_BREAKGLASS_WORKLOAD_UPDATE\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1548",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Breakglass Workload Deployment\nBINARY_AUTHORIZATION_BREAKGLASS_WORKLOAD_CREATE\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Breakglass Workload Deployment\nBINARY_AUTHORIZATION_BREAKGLASS_WORKLOAD_UPDATE\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "command-and-control",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090.002",
+			"tactic": "command-and-control",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Cloud Shell Proxy\nDEFENSE_EVASION_CLOUD_SHELL_PROXY\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090.003",
+			"tactic": "command-and-control",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Evasion: Access from Anonymizing Proxy\nANOMALOUS_ACCESS\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Reverse Shell\t\nscc service: KTD"
+				},
+				{
+					"name": "scc category",
+					"value": "Malicious Script Executed\nscc service: KTD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1568",
+			"tactic": "command-and-control",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Log4j Malware: Bad Domain\nLOG4J_BAD_DOMAIN\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Log4j Malware: Bad IP\nLOG4J_BAD_IP\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Malware: bad domain\nMALWARE_BAD_DOMAIN\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Malware: bad IP\nMALWARE_BAD_IP\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1210",
+			"tactic": "lateral-movement",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Active Scan: Log4j Vulnerable to RCE\nLOG4J_ACTIVE_SCAN_SUCCESS\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1098",
+			"tactic": "persistence",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Impair Defenses: Strong Authentication Disabled\nGSUITE_STRONG_AUTHENTICATION_DISABLED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Impair Defenses: Two Step Verification Disabled\nGSUITE_TWO_STEP_VERIFICATION_DISABLED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: New API Method\nANOMALOUS_BEHAVIOR_NEW_API_METHOD\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: SSO Enablement Toggle\nWORKSPACE_SSO_ENABLEMENT_TOGGLE\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: SSO Settings Changed\nWORKSPACE_SSO_SETTINGS_CHANGED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: Add Sensitive Role\nSENSITIVE_ACTION_ADD_SENSITIVE_ROLE\nscc service: SAS"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1098.004",
+			"tactic": "persistence",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: GCE Admin Added SSH Key\nGCE_ADMIN_ADD_SSH_KEY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: Project SSH Key Added\nSENSITIVE_ACTION_ADD_SSH_KEY\nscc service: SAS"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Government Based Attack\nGSUITE_GOVERNMENT_BACKED_ATTACK\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Log4j Compromise Attempt\nLOG4J_COMPROMISE_ATTEMPT\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Government Based Attack\nGSUITE_GOVERNMENT_BACKED_ATTACK\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Log4j Compromise Attempt\nLOG4J_COMPROMISE_ATTEMPT\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Government Based Attack\nGSUITE_GOVERNMENT_BACKED_ATTACK\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Log4j Compromise Attempt\nLOG4J_COMPROMISE_ATTEMPT\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Government Based Attack\nGSUITE_GOVERNMENT_BACKED_ATTACK\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Log4j Compromise Attempt\nLOG4J_COMPROMISE_ATTEMPT\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Brute Force: SSH\nSSH_BRUTE_FORCE\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "persistence",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Brute Force: SSH\nSSH_BRUTE_FORCE\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "privilege-escalation",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Brute Force: SSH\nSSH_BRUTE_FORCE\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "initial-access",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Brute Force: SSH\nSSH_BRUTE_FORCE\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: External Member Added To Privileged Group\nEXTERNAL_MEMBER_ADDED_TO_PRIVILEGED_GROUP\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: Privileged Group Opened To Public\nPRIVILEGED_GROUP_OPENED_TO_PUBLIC\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: Sensitive Role Granted To Hybrid Group\nSENSITIVE_ROLE_TO_GROUP_WITH_EXTERNAL_MEMBER\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Dormant Service Account Action\nDORMANT_SERVICE_ACCOUNT_USED_IN_ACTION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Excessive Permission Denied Actions\nEXCESSIVE_FAILED_ATTEMPT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Account Disabled Hijacked\nGSUITE_ACCOUNT_DISABLED_HIJACKED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Disabled Password Leak\nGSUITE_DISABLED_PASSWORD_LEAK\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Suspicious Login Blocked\nGSUITE_SUSPICIOUS_LOGIN_BLOCKED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: IAM Anomalous Grant\nIAM_ANOMALOUS_GRANT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: New Geography\nIAM_ANOMALOUS_BEHAVIOR_IP_GEOLOCATION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: New User Agent\nIAM_ANOMALOUS_BEHAVIOR_USER_AGENT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Impersonation of Service Account for Admin Activity\nANOMALOUS_SA_DELEGATION_IMPERSONATION_OF_SA_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Multistep Service Account Delegation for Admin Activity\nANOMALOUS_SA_DELEGATION_MULTISTEP_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Multistep Service Account Delegation for Data Access\nANOMALOUS_SA_DELEGATION_MULTISTEP_DATA_ACCESS\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Service Account Impersonator for Admin Activity\nANOMALOUS_SA_DELEGATION_IMPERSONATOR_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Service Account Impersonator for Data Access\nANOMALOUS_SA_DELEGATION_IMPERSONATOR_DATA_ACCESS\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "persistence",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: External Member Added To Privileged Group\nEXTERNAL_MEMBER_ADDED_TO_PRIVILEGED_GROUP\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: Privileged Group Opened To Public\nPRIVILEGED_GROUP_OPENED_TO_PUBLIC\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: Sensitive Role Granted To Hybrid Group\nSENSITIVE_ROLE_TO_GROUP_WITH_EXTERNAL_MEMBER\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Dormant Service Account Action\nDORMANT_SERVICE_ACCOUNT_USED_IN_ACTION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Excessive Permission Denied Actions\nEXCESSIVE_FAILED_ATTEMPT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Account Disabled Hijacked\nGSUITE_ACCOUNT_DISABLED_HIJACKED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Disabled Password Leak\nGSUITE_DISABLED_PASSWORD_LEAK\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Suspicious Login Blocked\nGSUITE_SUSPICIOUS_LOGIN_BLOCKED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: IAM Anomalous Grant\nIAM_ANOMALOUS_GRANT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: New Geography\nIAM_ANOMALOUS_BEHAVIOR_IP_GEOLOCATION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: New User Agent\nIAM_ANOMALOUS_BEHAVIOR_USER_AGENT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Impersonation of Service Account for Admin Activity\nANOMALOUS_SA_DELEGATION_IMPERSONATION_OF_SA_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Multistep Service Account Delegation for Admin Activity\nANOMALOUS_SA_DELEGATION_MULTISTEP_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Multistep Service Account Delegation for Data Access\nANOMALOUS_SA_DELEGATION_MULTISTEP_DATA_ACCESS\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Service Account Impersonator for Admin Activity\nANOMALOUS_SA_DELEGATION_IMPERSONATOR_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Service Account Impersonator for Data Access\nANOMALOUS_SA_DELEGATION_IMPERSONATOR_DATA_ACCESS\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "privilege-escalation",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: External Member Added To Privileged Group\nEXTERNAL_MEMBER_ADDED_TO_PRIVILEGED_GROUP\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: Privileged Group Opened To Public\nPRIVILEGED_GROUP_OPENED_TO_PUBLIC\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: Sensitive Role Granted To Hybrid Group\nSENSITIVE_ROLE_TO_GROUP_WITH_EXTERNAL_MEMBER\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Dormant Service Account Action\nDORMANT_SERVICE_ACCOUNT_USED_IN_ACTION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Excessive Permission Denied Actions\nEXCESSIVE_FAILED_ATTEMPT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Account Disabled Hijacked\nGSUITE_ACCOUNT_DISABLED_HIJACKED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Disabled Password Leak\nGSUITE_DISABLED_PASSWORD_LEAK\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Suspicious Login Blocked\nGSUITE_SUSPICIOUS_LOGIN_BLOCKED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: IAM Anomalous Grant\nIAM_ANOMALOUS_GRANT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: New Geography\nIAM_ANOMALOUS_BEHAVIOR_IP_GEOLOCATION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: New User Agent\nIAM_ANOMALOUS_BEHAVIOR_USER_AGENT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Impersonation of Service Account for Admin Activity\nANOMALOUS_SA_DELEGATION_IMPERSONATION_OF_SA_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Multistep Service Account Delegation for Admin Activity\nANOMALOUS_SA_DELEGATION_MULTISTEP_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Multistep Service Account Delegation for Data Access\nANOMALOUS_SA_DELEGATION_MULTISTEP_DATA_ACCESS\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Service Account Impersonator for Admin Activity\nANOMALOUS_SA_DELEGATION_IMPERSONATOR_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Service Account Impersonator for Data Access\nANOMALOUS_SA_DELEGATION_IMPERSONATOR_DATA_ACCESS\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "initial-access",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: External Member Added To Privileged Group\nEXTERNAL_MEMBER_ADDED_TO_PRIVILEGED_GROUP\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: Privileged Group Opened To Public\nPRIVILEGED_GROUP_OPENED_TO_PUBLIC\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Credential Access: Sensitive Role Granted To Hybrid Group\nSENSITIVE_ROLE_TO_GROUP_WITH_EXTERNAL_MEMBER\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Dormant Service Account Action\nDORMANT_SERVICE_ACCOUNT_USED_IN_ACTION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Excessive Permission Denied Actions\nEXCESSIVE_FAILED_ATTEMPT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Account Disabled Hijacked\nGSUITE_ACCOUNT_DISABLED_HIJACKED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Disabled Password Leak\nGSUITE_DISABLED_PASSWORD_LEAK\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Suspicious Login Blocked\nGSUITE_SUSPICIOUS_LOGIN_BLOCKED\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: IAM Anomalous Grant\nIAM_ANOMALOUS_GRANT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: New Geography\nIAM_ANOMALOUS_BEHAVIOR_IP_GEOLOCATION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Persistence: New User Agent\nIAM_ANOMALOUS_BEHAVIOR_USER_AGENT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Impersonation of Service Account for Admin Activity\nANOMALOUS_SA_DELEGATION_IMPERSONATION_OF_SA_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Multistep Service Account Delegation for Admin Activity\nANOMALOUS_SA_DELEGATION_MULTISTEP_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Multistep Service Account Delegation for Data Access\nANOMALOUS_SA_DELEGATION_MULTISTEP_DATA_ACCESS\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Service Account Impersonator for Admin Activity\nANOMALOUS_SA_DELEGATION_IMPERSONATOR_ADMIN_ACTIVITY\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Anomalous Service Account Impersonator for Data Access\nANOMALOUS_SA_DELEGATION_IMPERSONATOR_DATA_ACCESS\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Database Superuser Writes to User Tables\nCLOUDSQL_SUPERUSER_WRITES_TO_USER_TABLES\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "persistence",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Database Superuser Writes to User Tables\nCLOUDSQL_SUPERUSER_WRITES_TO_USER_TABLES\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "privilege-escalation",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Database Superuser Writes to User Tables\nCLOUDSQL_SUPERUSER_WRITES_TO_USER_TABLES\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "initial-access",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Initial Access: Database Superuser Writes to User Tables\nCLOUDSQL_SUPERUSER_WRITES_TO_USER_TABLES\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Changes to sensitive Kubernetes RBAC objects\nGKE_CONTROL_PLANE_EDIT_SENSITIVE_RBAC_OBJECT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Create Kubernetes CSR for master cert\nGKE_CONTROL_PLANE_CSR_FOR_MASTER_CERT\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Creation of sensitive Kubernetes bindings\nGKE_CONTROL_PLANE_CREATE_SENSITIVE_BINDING\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Get Kubernetes CSR with compromised bootstrap credentials\nGKE_CONTROL_PLANE_GET_CSR_WITH_COMPROMISED_BOOTSTRAP_CREDENTIALS\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Launch of privileged Kubernetes container\nGKE_CONTROL_PLANE_LAUNCH_PRIVILEGED_CONTAINER\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1496",
+			"tactic": "impact",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Malware: Cryptomining Bad Domain\nCRYPTOMINING_POOL_DOMAIN\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Malware: Cryptomining Bad IP\nCRYPTOMINING_POOL_IP\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Impact: GPU Instance Created\nSENSITIVE_ACTION_GPU_INSTANCE_CREATED\nscc service: SAS"
+				},
+				{
+					"name": "scc category",
+					"value": "Impact: Many Instances Created\nSENSITIVE_ACTION_MANY_INSTANCES_CREATED\nscc service: SAS"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1569",
+			"tactic": "execution",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1569.002",
+			"tactic": "execution",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Execution: Cryptocurrency Mining Hash Match\nscc service: VMTD"
+				},
+				{
+					"name": "scc category",
+					"value": "Execution: Cryptocurrency Mining YARA Rule\nscc service: VMTD"
+				},
+				{
+					"name": "scc category",
+					"value": "Execution: Cryptocurrency Mining Combined Detection\nscc service: VMTD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1485",
+			"tactic": "impact",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Data Destruction: Delete BigQuery resource\nBIG_QUERY_DATA_DESTRUCTION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Impact: Many Instances Deleted\nSENSITIVE_ACTION_MANY_INSTANCES_DELETED\nscc service: SAS"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1498",
+			"tactic": "impact",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Outgoing DoS\nOUTGOING_DOS\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1134",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Service Account Key Use\nIAM_ANOMALOUS_SA_KEY_USE\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1134",
+			"tactic": "privilege-escalation",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Privilege Escalation: Service Account Key Use\nIAM_ANOMALOUS_SA_KEY_USE\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Malware: Outgoing Port Scan\nOUTGOING_PORT_SCAN\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Added Binary Executed\t\nscc service: KTD"
+				},
+				{
+					"name": "scc category",
+					"value": "Added Library Loaded\t\nscc service: KTD"
+				},
+				{
+					"name": "scc category",
+					"value": "Malicious Script Executed\nscc service: KTD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1556",
+			"tactic": "credential-access",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Modify VPC Service Control\nDEFENSE_EVASION_MODIFY_VPC_SERVICE_CONTROL\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Modify VPC Ingress or Egress\nVPCSC_INGRESS_EGRESS_CHANGE_REDUCES_PROTECTION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Modify Access Level\nVPCSC_ACCESS_LEVEL_CHANGE_REDUCES_PROTECTION\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1556",
+			"tactic": "defense-evasion",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Modify VPC Service Control\nDEFENSE_EVASION_MODIFY_VPC_SERVICE_CONTROL\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Modify VPC Ingress or Egress\nVPCSC_INGRESS_EGRESS_CHANGE_REDUCES_PROTECTION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Modify Access Level\nVPCSC_ACCESS_LEVEL_CHANGE_REDUCES_PROTECTION\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1556",
+			"tactic": "persistence",
+			"color": "#a1d99b",
+			"comment": "",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "category",
+					"value": "Detect"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Modify VPC Service Control\nDEFENSE_EVASION_MODIFY_VPC_SERVICE_CONTROL\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Modify VPC Ingress or Egress\nVPCSC_INGRESS_EGRESS_CHANGE_REDUCES_PROTECTION\nscc service: ETD"
+				},
+				{
+					"name": "scc category",
+					"value": "Defense Evasion: Modify Access Level\nVPCSC_ACCESS_LEVEL_CHANGE_REDUCES_PROTECTION\nscc service: ETD"
+				}
+			],
+			"links": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ff6666ff",
+			"#ffe766ff",
+			"#8ec843ff"
+		],
+		"minValue": 0,
+		"maxValue": 100
+	},
+	"legendItems": [],
+	"metadata": [
+		{
+			"name": "author",
+			"value": "acosteseque@"
+		},
+		{
+			"name": "version",
+			"value": "1.0"
+		}
+	],
+	"links": [
+		{
+			"label": "Security Command Center",
+			"url": "https://cloud.google.com/security-command-center"
+		},
+		{
+			"label": "Navigator Layer json link",
+			"url": "https://github.com/acosteseque/scc/blob/main/security_command_center.json"
+		}
+	],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}
